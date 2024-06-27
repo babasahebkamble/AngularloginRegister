@@ -1,0 +1,50 @@
+<!-- table.component.html -->
+<app-admin></app-admin>
+
+<div>
+    <div class="container" fxLayout="column">
+        <mat-form-field class="filter">
+            <input matInput (keyup)="applyFilter($event)" placeholder=" search" #input>
+
+        </mat-form-field>   
+                  <br>
+                  <button   routerLink="/shipper/createshiper">Add</button>  
+
+    <table mat-table [dataSource]="dataSource" matSort class="mat-elevation-z8">
+     
+      <ng-container matColumnDef="id">
+        <th mat-header-cell *matHeaderCellDef>ID</th>
+        <td mat-cell *matCellDef="let res">{{ res.id }}</td>
+      </ng-container>
+      <ng-container matColumnDef="Name">
+        <th mat-header-cell *matHeaderCellDef>Shipper </th>
+        <td mat-cell *matCellDef="let res">{{ res.shippername }}</td>
+      </ng-container>
+      <ng-container matColumnDef="Contact">
+        <th mat-header-cell *matHeaderCellDef>Contact</th>
+        <td mat-cell *matCellDef="let res">{{ res.stelno }}</td>
+      </ng-container>
+      <ng-container matColumnDef="GST">
+        <th mat-header-cell *matHeaderCellDef>GST</th>
+        <td mat-cell *matCellDef="let res">{{ res.sgstno }}</td>
+      </ng-container>
+      <ng-container matColumnDef="actions">
+        <th mat-header-cell *matHeaderCellDef>Actions</th>
+        <td mat-cell *matCellDef="let item">
+          <button mat-raised-button color="primary">Update</button>
+          <button mat-raised-button color="warn">Delete</button>
+          <button mat-raised-button color="accent">Details</button>
+        </td>
+      </ng-container>
+  
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+      <tr class="mat-row" *matNoDataRow>
+        <td class="mat-cell" colspan="4">No data matching the filter "{{input.value}}"</td>
+      </tr>
+  
+    </table>
+    <mat-paginator [pageSizeOptions]="[3, 10, 25, 100]" aria-label="Select page of users"></mat-paginator>
+
+  </div>
+</div>

@@ -1,0 +1,72 @@
+<app-admin></app-admin>
+<br>
+
+<div class="main-body">
+
+  <mat-form-field>
+    <mat-label>Search</mat-label>
+    <input matInput (keyup)="applyFilter($event)" placeholder="" #input>
+  </mat-form-field>
+
+
+
+  <div class="table-container">
+    <button class="btn btn-primary btn-lg" routerLink="/lr/createlr">manual</button>
+    <button class="btn btn-primary btn-lg" routerLink="/lr/createlr">Auto</button>
+ 
+    <table mat-table [dataSource]="dataSource" matSort>
+
+
+      <ng-container matColumnDef="lr_number">
+        <th class="col1" mat-header-cell *matHeaderCellDef mat-sort-header> LRNO </th>
+        <td class="col1" mat-cell *matCellDef="let row">{{row.lrno}} </td>
+      </ng-container>
+      <ng-container matColumnDef="branchName">
+        <th class="col2" mat-header-cell *matHeaderCellDef mat-sort-header>branchName</th>
+        <td class="col2" mat-cell *matCellDef="let row"> {{row.branchName}}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="fromLocation">
+        <th class="col3" mat-header-cell *matHeaderCellDef mat-sort-header> fromLocation</th>
+        <td class="col3" mat-cell *matCellDef="let row"> {{row.fromLocation}}</td>
+      </ng-container>
+      <ng-container matColumnDef="toLocation">
+        <th class="col4" mat-header-cell *matHeaderCellDef mat-sort-header> toLocation</th>
+        <td class="col4" mat-cell *matCellDef="let row"> {{row.toLocation}}</td>
+      </ng-container>
+      <ng-container matColumnDef="shipperName">
+        <th class="col5" mat-header-cell *matHeaderCellDef mat-sort-header> shipperName</th>
+        <td class="col5" mat-cell *matCellDef="let row"> {{row.shipperName}}</td>
+      </ng-container>
+      <ng-container matColumnDef="receiverName">
+        <th class="col6" mat-header-cell *matHeaderCellDef mat-sort-header> receiverName</th>
+        <td class="col6" mat-cell *matCellDef="let row"> {{row.receiverName}}</td>
+      </ng-container>
+      <ng-container matColumnDef="lrStatus">
+        <th class="col17" mat-header-cell *matHeaderCellDef mat-sort-header>Status</th>
+        <td class="col17" mat-cell *matCellDef="let row"> {{row.lrStatus}}</td>
+      </ng-container>
+      
+
+      <ng-container matColumnDef="action">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> Action </th>
+        <td class="btn-parent" mat-cell *matCellDef="let row">
+          <button (click)="deletelorry(row.id)">Delete</button>
+          <button  (click)="Editlorry(row)">Edit</button>
+          <button  (click)="invoicelorry(row)">invoice</button>
+          
+        </td>
+      </ng-container>
+
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+
+      <!-- Row shown when there is no matching data. -->
+      <tr class="mat-row" *matNoDataRow>
+        <td class="mat-cell" colspan="4">No data matching the filter "{{input.value}}"</td>
+      </tr>
+    </table>
+
+    <mat-paginator [pageSizeOptions]="[5, 10, 25, 100]" aria-label="Select page of users"></mat-paginator>
+  </div>
+</div>

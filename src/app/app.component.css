@@ -1,0 +1,31 @@
+@import "~bootstrap/dist/css/bootstrap.css";
+#container{
+    background-color: #ffccd0;
+    margin: 5px;
+    padding: 5px;
+    border-radius: 5px;
+    height: 200px;
+}
+.home-container {
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .transport-image {
+    max-width: 100%;
+    height: auto;
+    margin: 20px 0;
+    background-color: #2040f4;
+  }
+  
+  .home-container a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: #007bff;
+  }
+  
+  .home-container a:hover {
+    text-decoration: underline;
+  }
+  
+  

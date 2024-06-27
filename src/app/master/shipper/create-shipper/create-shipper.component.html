@@ -1,0 +1,59 @@
+
+<app-admin></app-admin>
+<br>
+        <div class="custom-input">
+          
+        </div>
+
+
+        <form [formGroup]="lrshipper" (ngSubmit)="onSubmit(lrshipper.value)" class="custom-form">
+          <div class="custom-input">
+            <mat-form-field appearance="fill" >
+                <mat-label>Shipper Name</mat-label>
+                <input matInput placeholder=" shippername" type="text" formControlName="shippername">
+            </mat-form-field>
+            <mat-form-field appearance="fill" >
+                <mat-label>Shipper Address</mat-label>
+                <input matInput placeholder="Address" type="text" formControlName="saddress">
+            </mat-form-field>
+            <mat-form-field appearance="fill" >
+                <mat-label>Shipper pin code</mat-label>
+                <input matInput placeholder="pincode" type="text" formControlName="spin">
+            </mat-form-field>
+            <mat-form-field appearance="fill" >
+                <mat-label>Contact No</mat-label>
+                <input matInput placeholder="contactNo"   maxlength="10" type="text" formControlName="stelno">
+                <mat-icon matSuffix>phone</mat-icon>
+
+            </mat-form-field>  
+            <mat-form-field appearance="fill" >
+                <mat-label> GST Number</mat-label>
+                <input matInput placeholder="GSTNumber" type="text" formControlName="sgstno">
+            </mat-form-field>
+            <mat-form-field appearance="fill">
+                <mat-label>State</mat-label>
+                <mat-select formControlName="sstate" multiple="false">
+                    <mat-select-filter formControlName="sstate" class="pink-select"></mat-select-filter>  
+                    <mat-option *ngFor="let val of state" [value]="val">{{val}}
+                    
+                    </mat-option>
+                </mat-select>
+            </mat-form-field> 
+                <mat-form-field appearance="fill" >
+                <mat-label>City</mat-label>
+                <input matInput placeholder="city" type="text" formControlName="scity">
+            </mat-form-field>
+              </div>
+        <div class="custom-input">
+          
+           
+      </div>
+      <div>
+        <button mat-raised-button color="primary" type="submit" class="custom-button">Save</button>
+      </div>
+        
+        </form>    
+
+
+
+  

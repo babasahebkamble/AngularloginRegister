@@ -1,0 +1,48 @@
+/* table.component.css */
+.container {
+    background-color: #7bc725; /* Add your desired background color */
+    padding: 16px;
+  }
+  
+  .mat-elevation-z8 {
+    /* Add any custom styles for the table */
+  }
+  
+  /* Add custom styles for buttons if needed */
+  .mat-raised-button {
+    margin-right: 8px;
+  }
+  /*  for button */
+  /* Define button styles */
+.my-button {
+    display: inline-block;
+    padding: 10px 20px; /* Adjust padding as needed */
+    background-color: #007bff; /* Button background color */
+    color: #fff; /* Text color */
+    border: none;
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Smooth hover effect */
+  }
+  
+  /* Hover effect */
+  .my-button:hover {
+    background-color: #0056b3; /* Hover background color */
+  }
+  
+  /* Additional styling for button states (optional) */
+  .my-button:active {
+    background-color: #004396; /* Active (click) background color */
+  }
+  
+  .my-button:focus {
+    outline: none; /* Remove outline on focus (for accessibility) */
+  }
+  
+  /* Disable button styles (optional) */
+  .my-button[disabled] {
+    background-color: #ccc;
+    color: #888;
+    cursor: not-allowed;
+  }
+  /* @import "~bootstrap/dist/css/bootstrap.css"; */

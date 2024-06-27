@@ -1,0 +1,39 @@
+/* my-form.component.css */
+.custom-form {
+    /* Add styles for the entire form */
+    /* width: 300px;
+    margin:  auto; */
+    margin: auto;
+    width: 90%;
+    border: 3px solid #73AD21;
+    padding: 10px;
+    display: flex;
+  
+  
+  }
+  
+  .custom-input {
+    /* Add styles for the form field */
+    width: 90%;
+    margin-bottom: 10px;
+  }
+  
+  .custom-input-field {
+    /* Add styles for the input field */
+    font-size: 16px;
+    border: px solid #11c011;
+    border-radius: 4px;
+    padding: 10px;
+  }
+  
+  .custom-button {
+      border: none;
+      color: #f81084;
+      padding: .4rem .8rem;
+      border-radius: 5rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      font-weight: bold;
+  }

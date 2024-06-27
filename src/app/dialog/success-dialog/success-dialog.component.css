@@ -1,0 +1,56 @@
+/* styles.css or your custom styles file */
+
+/* Styling the dialog container */
+.mat-dialog-container {
+    /* Set the background color */
+    background-color: #fff;
+    /* Add some padding */
+    padding: 16px;
+    /* Set the maximum width of the dialog */
+    max-width: 400px;
+    /* Center the dialog horizontally */
+    margin: 0 auto;
+    /* Add a box shadow for a subtle elevation effect */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Styling the dialog title */
+  .mat-dialog-title {
+    /* Customize the title text color */
+    color: #333;
+    /* Increase font size and make it bold */
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
+  
+  /* Styling the dialog content */
+  .mat-dialog-content {
+    /* Customize the content text color */
+    color: #666;
+  }
+  
+  /* Styling the dialog actions (buttons) */
+  .mat-dialog-actions {
+    /* Center the buttons */
+    justify-content: center;
+    margin-top: 16px;
+  }
+  
+  /* Styling the OK button */
+  button.mat-button {
+    /* Customize the button background color */
+    background-color: #007bff;
+    /* Customize the button text color */
+    color: #fff;
+    /* Add padding to the button */
+    padding: 8px 16px;
+    /* Add some border-radius for rounded corners */
+    border-radius: 4px;
+    /* Add a hover effect */
+    transition: background-color 0.3s ease;
+  }
+  
+  /* Hover effect for the OK button */
+  button.mat-button:hover {
+    background-color: #0056b3;
+  }

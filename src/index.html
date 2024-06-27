@@ -6,8 +6,41 @@
   <base href="/">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  
+  <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+  
+<STYLE TYPE="text/css">
+  <!--
+  TD{font-family: Arial; font-size: 9pt;}
+  --->
+</STYLE>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/js/bootstrap-datepicker.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/css/bootstrap-datepicker3.css"/>
+
+<script type="text/javascript">
+      $(document).ready(function(){      
+        var i=1;  
+
+
+        $('#add').click(function(){  
+         i++;  
+         $('#dynamic_field').append('<tr id="row'+i+'" class="dynamic-added"><td><input type="text" name="invoiceno[]" placeholder="Invoice No" required class="form-control invoiceno_list" /></td><td><input type="text" name="invoicedate[]" placeholder="dd-mm-yyyy" required class="form-control invoicedate_list" /></td><td><input type="text" name="declairedval[]" placeholder="Declaired Value" required class="form-control declairedval_list" /></td><td><button type="button" name="remove" id="'+i+'" class="btn btn-danger btn-xs btn_remove"><i class="fas fa-times-circle fa-2x"></i></button></td></tr>');  
+       });  
+
+
+        $(document).on('click', '.btn_remove', function(){  
+         var button_id = $(this).attr("id");   
+         $('#row'+button_id+'').remove();  
+       });  
+     });  
+   </script>
+
+
 </head>
-<body>
+<body class="mat-typography">
   <app-root></app-root>
 </body>
 </html>

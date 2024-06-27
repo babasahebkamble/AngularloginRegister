@@ -1,0 +1,127 @@
+<app-admin></app-admin>
+
+<br>
+<form [formGroup]="lrForm" (ngSubmit)="onSubmit(lrForm.value)" class="custom-form">
+    
+    <div class="custom-input">
+        <mat-form-field appearance="fill" >
+            <mat-label>LR Number</mat-label>
+            <input matInput placeholder="LR Number" type="text" formControlName="lrno">
+        </mat-form-field>
+        <mat-form-field appearance="fill" >
+            <mat-label> LR Date </mat-label>
+            <input matInput placeholder=" LR Date" type="date" formControlName="lrdate">
+        </mat-form-field>
+        
+        
+    </div>
+    <div class="custom-input">
+        <mat-form-field appearance="fill" >
+            <mat-label>From</mat-label>
+            <mat-select formControlName="fromLocation" multiple="false">
+                <mat-select-filter formControlName="fromLocation" class="pink-select"></mat-select-filter>
+                <mat-option *ngFor="let val of apiData" [value]="val.locationName">{{val.locationName}}
+                </mat-option>
+            </mat-select>
+        </mat-form-field>
+        
+        <mat-form-field appearance="fill"multiple="false" >
+            <mat-label>To</mat-label>
+            <mat-select formControlName="toLocation">
+                <mat-select-filter formControlName="toLocation" class="pink-select"></mat-select-filter>
+                <mat-option *ngFor="let val of apiData" [value]="val.locationName" >{{val.locationName}}
+                </mat-option>
+            </mat-select>
+        </mat-form-field>
+        <mat-form-field appearance="fill" multiple="false">
+            <mat-label>Branch</mat-label>        
+            <mat-select formControlName="branchName">
+                <mat-select-filter formControlName="branchName" class="pink-select"></mat-select-filter>
+                <mat-option *ngFor="let val of apiDataBranch" [value]="val.branchname">{{val.branchname}}
+                </mat-option>
+            </mat-select>
+
+        </mat-form-field>   
+        <mat-form-field appearance="fill" multiple="false">
+            <mat-label>Receiver Name</mat-label>
+            <mat-select formControlName="receiverName">
+                <mat-select-filter formControlName="receiverName" class="pink-select"></mat-select-filter>  
+                <mat-option *ngFor="let val of apiDataReceiver" [value]="val.receivername">{{val.receivername}}
+                </mat-option>
+            </mat-select>
+        </mat-form-field>  
+
+        <mat-form-field appearance="fill">
+            <mat-label>Shipper Name</mat-label>
+            <mat-select formControlName="shipperName" multiple="false">
+                <mat-select-filter formControlName="shipperName" class="pink-select"></mat-select-filter>  
+                <mat-option *ngFor="let val of apiDataShipper" [value]="val.shippername">{{val.shippername}}
+                
+                </mat-option>
+            </mat-select>
+        </mat-form-field> 
+
+    </div>
+    <div class="custom-input">
+        <mat-form-field appearance="fill">
+            <mat-label> Shipment Mode</mat-label>
+            <mat-select formControlName="shipmentMode">
+                <mat-option *ngFor="let val of ShipmentMode" [value]="val">{{val}}
+                </mat-option>
+            </mat-select>
+        </mat-form-field>
+        <mat-form-field appearance="fill">
+            <mat-label> GST Payable</mat-label>
+            <mat-select formControlName="gstpayableby">
+                <mat-option *ngFor="let val of gstpayableby" [value]="val">{{val}}
+                </mat-option>
+            </mat-select>
+        </mat-form-field> 
+
+         <mat-form-field appearance="fill">
+            <mat-label>Nature of freight</mat-label>
+            <mat-select formControlName="nfreight">
+                <mat-option *ngFor="let val of nfreight" [value]="val">{{val}}
+                </mat-option>
+            </mat-select>
+        </mat-form-field> 
+       <mat-form-field appearance="fill">
+            <mat-label>Service Type</mat-label>
+            <mat-select formControlName="servicetype">
+                <mat-option *ngFor="let val of servicetype" [value]="val">{{val}}
+                </mat-option>
+            </mat-select>
+        </mat-form-field> 
+
+        <mat-form-field appearance="fill" >
+            <mat-label>Transit Days</mat-label>
+            <input matInput placeholder="Transit Days" type="text" formControlName="transitdays">
+        </mat-form-field>
+   
+    </div>
+    <div class="custom-input">
+        <mat-form-field appearance="fill" >
+            <mat-label>Receiver pin</mat-label>
+            <input matInput placeholder=" no of package" type="number" formControlName="noofpackage">
+        </mat-form-field>
+        <mat-form-field appearance="fill" >
+            <mat-label>Particulars</mat-label>
+            <input matInput placeholder="particular" type="text" formControlName="particular">
+        </mat-form-field>
+        <mat-form-field appearance="fill" >
+            <mat-label> Gross weight kgs</mat-label>
+            <input matInput placeholder="Gross Weight" type="number" formControlName="grossweight">
+        </mat-form-field>
+        <mat-form-field appearance="fill" >
+            <mat-label>Remark</mat-label>
+            <input matInput placeholder="remark" type="text" formControlName="remark">
+        </mat-form-field>  
+        <mat-form-field appearance="fill" >
+            <mat-label>Eway Bill No</mat-label>
+            <input matInput placeholder="Eway Bill No" type="text" formControlName="ewaybillno">
+        </mat-form-field>
+    </div>
+    
+   <button mat-raised-button type="submit" class="custom-button">Save</button>
+    
+  </form>

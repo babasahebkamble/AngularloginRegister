@@ -1,0 +1,37 @@
+/* @import "~bootstrap/dist/css/bootstrap.css"; */
+
+.table-container {
+    background-color: #f81084;
+    border: 1px solid #3a0da1;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(33, 110, 52, 0.1);
+  }
+  
+  table {
+    width: 100%;
+  }
+  
+input[type=text] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: 2px solid red;
+  border-radius: 4px;
+}
+table {
+    width: 100%;
+    padding: 16px;
+
+  }
+  
+  .mat-mdc-form-field {
+    font-size: 11px;
+    width: 100%;
+  }
+  
+  td, th {
+    width: 11%;
+  }
+  

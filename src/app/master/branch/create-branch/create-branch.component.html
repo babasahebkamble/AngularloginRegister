@@ -1,0 +1,48 @@
+<app-admin></app-admin>
+<br>
+        <div class="custom-input">
+          
+        </div>
+
+
+        <form [formGroup]="branchModel" (ngSubmit)="onSubmit(branchModel.value)" class="custom-form">
+          <div class="custom-input">
+            <mat-form-field appearance="fill" >
+                <mat-label>Branch Name</mat-label>
+            <input matInput placeholder=" Branch Name" type="text" formControlName="branchname">
+            </mat-form-field>
+            <mat-form-field appearance="fill">
+                <mat-label>Branch Address</mat-label>
+                <input matInput placeholder="BranchAddress" type="text" formControlName="branchaddress">
+            </mat-form-field>
+                    <mat-form-field appearance="fill" >
+                <mat-label>Employee</mat-label>
+                <input matInput placeholder="branchemployee" type="text" formControlName="branchemployee">
+            </mat-form-field>
+              </div>
+        <div class="custom-input">
+          
+          <mat-form-field appearance="fill" >
+            <mat-label>Branch Code</mat-label>
+            <input matInput placeholder="Branch code" type="text" formControlName="branchcode">
+        </mat-form-field>
+        <mat-form-field appearance="fill" >
+          <mat-label>Branch Email</mat-label>
+          <input matInput placeholder="branchemail" type="text" formControlName="branchemail">
+      </mat-form-field>
+      <mat-form-field appearance="fill" >
+        <mat-label>Contact</mat-label>
+        <input matInput placeholder="branchphone" type="text" formControlName="branchphone">
+    </mat-form-field>
+        
+        
+      </div>
+      <div>
+        <button mat-raised-button color="primary" type="submit" class="custom-button">Save</button>
+      </div>
+        
+        </form>    
+
+
+
+  
